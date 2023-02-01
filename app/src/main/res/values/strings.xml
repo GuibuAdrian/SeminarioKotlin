@@ -7,4 +7,8 @@
     <string name="error_message">Se ha producido un error autenticando al usuario</string>
     <string name="error">Error</string>
     <string name="ok">Aceptar</string>
+    
+    <string name="cargando">Cargando...</string>
+    <string name="prefs_file">com.avalith.seminariokotlin.PREFERENCE_FILE_KEY</string>
+    <string name="email">Email</string>
 </resources>
