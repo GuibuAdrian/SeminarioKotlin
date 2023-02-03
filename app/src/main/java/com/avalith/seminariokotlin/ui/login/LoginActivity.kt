@@ -37,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun session() {
         getEmailPref()?.let { MainActivity.start(this) }
-
     }
 
     private fun subscribeToLiveData() {
@@ -94,6 +93,6 @@ class LoginActivity : AppCompatActivity() {
                 dismissAndAlert()
             }
         }
-
     }
+
 }
