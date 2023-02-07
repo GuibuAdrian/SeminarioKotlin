@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "808774482230",
+    "firebase_url": "https://seminario-kotlin-default-rtdb.firebaseio.com",
+    "project_id": "seminario-kotlin",
+    "storage_bucket": "seminario-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808774482230:android:af03ecb1fd0c1ac4309b97",
+        "android_client_info": {
+          "package_name": "com.avalith.seminariokotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808774482230-98m60f1ego3e3pp5pke1ta1iq4peefk1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avalith.seminariokotlin",
+            "certificate_hash": "50606e2e69b930d562e9f6916657bcd9be4df71b"
+          }
+        },
+        {
+          "client_id": "808774482230-ksjj3jkebmfsccb8kkfgu7154i2b0o3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avalith.seminariokotlin",
+            "certificate_hash": "5f0a74278385eb4f08dc6ca5000eb66edb91d89c"
+          }
+        },
+        {
+          "client_id": "808774482230-5v7i385m5goiqg7v5rokvq39spip80dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtmMyljHKSziHPmlfrKFZ3J1Josh71WLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808774482230-5v7i385m5goiqg7v5rokvq39spip80dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
