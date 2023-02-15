@@ -17,6 +17,7 @@ import com.avalith.seminariokotlin.extensions.signOut
 import com.avalith.seminariokotlin.model.Post
 import com.avalith.seminariokotlin.model.Weather
 import com.avalith.seminariokotlin.ui.adapter.PostAdapter
+import com.avalith.seminariokotlin.ui.post.PostActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -61,14 +62,14 @@ class MainActivity : AppCompatActivity() {
                         viewModel.getAddressAndWeather(this, task.result)
                     }
                 } else {
-                    viewModel.getAddressAndWeather(null)
+                    viewModel.getAddressAndWeather(this,null)
                 }
             }
         }
     }
     private fun setButtons() {
         binding.logoutButton.setOnClickListener { onBackPressed() }
-        binding.postButton.setOnClickListener {  }
+        binding.postButton.setOnClickListener { PostActivity.start(this) }
     }
 
     private fun subscribeToLiveData() {

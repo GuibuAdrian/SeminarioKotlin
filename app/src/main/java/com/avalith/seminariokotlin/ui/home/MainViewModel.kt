@@ -25,10 +25,10 @@ class MainViewModel: ViewModel() {
     private val weatherRepo = WeatherRepo()
     private val firebaseRepo = FirebaseRepo()
 
-    fun getAddressAndWeather(context: Context?, location: Location?=null){
-        context
+    fun getAddressAndWeather(context: Context, location: Location?=null){
+        location
             ?.let {
-                val address = getAddress(it, location!!)
+                val address = getAddress(context, location!!)
                 getWeather(address)
             }
             ?:run { getWeather("Ayampe") }
@@ -57,12 +57,13 @@ class MainViewModel: ViewModel() {
         val postList = ArrayList<Post>()
         firebaseRepo.getPost().addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                postList.clear()
                 snapshot.children.forEach { data ->
                     data.getValue(Post::class.java)?.let {
                         postList.add(it)
                     }
                 }
-                dataLiveData.value = postList
+                dataLiveData.value = postList.sortedByDescending { it.timestamp }
             }
 
             override fun onCancelled(error: DatabaseError) {
