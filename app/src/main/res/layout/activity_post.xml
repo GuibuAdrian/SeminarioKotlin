@@ -49,17 +49,20 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonsLayout">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
             android:layout_width="180dp"
             android:layout_height="300dp"
             android:src="@drawable/ic_launcher_background"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText"
+    <EditText
+        android:id="@+id/editTextDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Description"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +76,6 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
