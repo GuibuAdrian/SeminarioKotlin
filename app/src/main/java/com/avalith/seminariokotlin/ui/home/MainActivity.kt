@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
 
     companion object {
-        const val REQUEST = 1
+        const val REQUEST = 100
         fun start(activity: Activity) {
             activity.startActivity(Intent(activity, MainActivity::class.java))
         }
@@ -57,12 +57,12 @@ class MainActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             REQUEST -> {
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    fusedLocationProviderClient.lastLocation.addOnCompleteListener(this) { task ->
+                if ((grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    fusedLocationProviderClient.lastLocation.addOnCompleteListener() { task ->
                         viewModel.getAddressAndWeather(this, task.result)
                     }
                 } else {
-                    viewModel.getAddressAndWeather(this,null)
+                    viewModel.getAddressAndWeather(this)
                 }
             }
         }

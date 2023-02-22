@@ -25,10 +25,10 @@ class MainViewModel: ViewModel() {
     private val weatherRepo = WeatherRepo()
     private val firebaseRepo = FirebaseRepo()
 
-    fun getAddressAndWeather(context: Context, location: Location?=null){
-        location
+    fun getAddressAndWeather(context: Context?, location: Location?=null){
+        context
             ?.let {
-                val address = getAddress(context, location!!)
+                val address = getAddress(it, location!!)
                 getWeather(address)
             }
             ?:run { getWeather("Ayampe") }
